@@ -74,4 +74,24 @@ public class CarrinhodeCompras {
         }
         return total_a_pagar;
     }
+    public boolean validaPagamento(Double valorTotal, Double valorPagamento ){
+        if(valorTotal>valorPagamento){
+            return false;
+        }
+        return true;
+    }
+
+    public void Pagamento(double valor) {
+    	Double totalAPagar = this.total_a_pagar;
+    	System.out.println("O valor total da compra Ã© :"+totalAPagar);
+    	if(valor < totalAPagar ) {
+    		System.out.printf("\nO valor inserido Ã© insuficiente");
+    	}else {
+    		valor -= totalAPagar;
+    		System.out.println("Pagamento efetuado com sucesso!!\nO seu troco Ã© de :"+valor);
+    	}
+    }
+    
+    
+    
 }
