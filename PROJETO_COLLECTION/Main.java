@@ -67,7 +67,16 @@ public class Main {
                             }while (opcaoMenuCarrinho<=3);
 
                     break;
-                case 3:     catalogo.apresentarCatalogoProdutos();
+                case 3:
+                       System.out.printf("\nEntre com o valor de pagamento : ");
+                       valorPagamento = leia.nextDouble();
+         
+                        while(!carrinho.validaPagamento(carrinho.totalProdutosPagar(), valorPagamento)){
+                                System.out.println("O valor estÃ¡ a menor poderia adicionar novamente ? ");
+                                System.out.printf("\nEntre com o valor de pagamento : ");
+                                valorPagamento = leia.nextDouble();
+                        }
+                        carrinho.Pagamento(valorPagamento);
                     break;
 
          }
