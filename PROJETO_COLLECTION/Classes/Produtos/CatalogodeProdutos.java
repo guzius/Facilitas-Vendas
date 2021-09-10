@@ -1,5 +1,4 @@
-package ProjetoMaquinaDeVendas.PROJETO_COLLECTION.Classes.Produtos;
-
+package ProjetoMaquinaDeVendas-master.PROJETO_COLLECTION.Classes.Produtos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +34,7 @@ public class CatalogodeProdutos extends Produto {
 
         setProdutosdoCatalogo(novoProduto); //Adiciona um Objeto de produto na colletion
 
-        System.out.println("\nO produto: " + novoProduto.getNome() + " foi Adicionado no catalogo com sucesso ");
+    //    System.out.println("\nO produto: " + novoProduto.getNome() + " foi Adicionado no catalogo com sucesso ");
 
     }
 

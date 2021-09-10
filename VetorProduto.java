@@ -1,10 +1,10 @@
-package ProjetoMaquinaDeVendas2;
+package ProjetoMaquinaDeVendas-master;
 
 public class VetorProduto {
 
 	public void vetorProdutos()
 	{
-		Produto[] vetor = new Produto[5];
+		/*Produto[] vetor = new Produto[5];
 		
 		vetor[0] = new Produto("Refrigerante",3,"dez/2021",10);
 		vetor[1] = new Produto("Chocolate",(float) 3.99,"abril/2022",22);
@@ -19,7 +19,7 @@ public class VetorProduto {
 		
 		System.out.println("\n**********************************************");
 
-		
+		*/
 	}
 
 

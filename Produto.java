@@ -1,4 +1,4 @@
-package Projeto;
+package ProjetoMaquinaDeVendas-master;
 
 import java.text.NumberFormat;
 
@@ -28,7 +28,7 @@ public class Produto {
 	
 	public void listaProdutos()
 	{
-		System.out.println("\n"+nome+"\nPreço: "+this.formatarMoeda()+"\nValidade: "+validade);
+		System.out.println("\n"+nome+"\nPreï¿½o: "+this.formatarMoeda()+"\nValidade: "+validade);
 		
 	}
 

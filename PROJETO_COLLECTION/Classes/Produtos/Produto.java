@@ -1,5 +1,4 @@
-package ProjetoMaquinaDeVendas.PROJETO_COLLECTION.Classes.Produtos;
-
+package ProjetoMaquinaDeVendas-master.PROJETO_COLLECTION.Classes.Produtos;
 
 public class Produto {
 

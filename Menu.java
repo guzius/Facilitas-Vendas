@@ -1,8 +1,10 @@
-package Projeto;
+package ProjetoMaquinaDeVendas-master;
+
+import ProjetoMaquinaDeVendas2.VetorProduto;
 
 import java.util.Scanner;
 
-public class Menu extends VetorProduto{
+public class Menu extends VetorProduto {
 	
 	private int op;
 	

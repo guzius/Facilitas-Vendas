@@ -1,4 +1,4 @@
-package ProjetoMaquinaDeVendas.PROJETO_COLLECTION.Classes;
+package ProjetoMaquinaDeVendas-master.PROJETO_COLLECTION.Classes;
 
 import ProjetoMaquinaDeVendas.Classes.Produtos.Produto;
 
@@ -32,23 +32,17 @@ public class CarrinhodeCompras {
 
     public String removerProdutoCarrinho (int indexObjeto)
     {
-        int quantidadeCarrinho = carrinhodeCompras.size();
+            //int quantidadeCarrinho = carrinhodeCompras.size();
 
-        if (quantidadeCarrinho<1)
-        {
-            return ("O seu carrinho está vazio");
-        }
-        else
-        {
            this.carrinhodeCompras.remove(indexObjeto);
            return ("O produto foi removido com sucesso");
 
         }
 
-    }
+
 
     public void mostrarProdutosCarrinho (){
-
+        System.out.println("\n----------------------------- PRODUTOS DO SEU CARRINHO -----------------------\n");
         for (int i=0; i< carrinhodeCompras.size(); i++)
         {
                String nomeProduto = carrinhodeCompras.get(i).getNome();
@@ -60,19 +54,24 @@ public class CarrinhodeCompras {
                int id_produto = i;
                //O ID DO PRODUTO SE REFERE AO INDEX DA COLETION ONDE O OBJETO ESTÁ ARMAZENADO
 
-               System.out.println("ID: " + id_produto + "Produto: " + nomeProduto + "Valor: " +precoProduto);
+
+               System.out.println("ID: " + id_produto + " Produto: " + nomeProduto + " R$: " +precoProduto );
+
         }
+        System.out.println("TOTAL A PAGAR: " + this.totalProdutosPagar());
+        System.out.println("\n-----------------------------------------------------------------------\n");
 
     }
 
-    public void totalProdutosPagar (){
+    public Double totalProdutosPagar (){
 
+        this.total_a_pagar = 0.0;
         for (int i=0; i< carrinhodeCompras.size(); i++)
         {
 
             this.total_a_pagar += carrinhodeCompras.get(i).getPreco();
 
         }
-
+        return total_a_pagar;
     }
 }
