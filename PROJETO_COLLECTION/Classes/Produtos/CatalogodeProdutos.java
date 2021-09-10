@@ -1,4 +1,5 @@
-package ProjetoMaquinaDeVendas.Classes.Produtos;
+package ProjetoMaquinaDeVendas.PROJETO_COLLECTION.Classes.Produtos;
+
 
 import java.util.ArrayList;
 import java.util.List;

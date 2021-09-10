@@ -1,4 +1,4 @@
-package ProjetoMaquinaDeVendas.Classes;
+package ProjetoMaquinaDeVendas.PROJETO_COLLECTION.Classes;
 
 import ProjetoMaquinaDeVendas.Classes.Produtos.Produto;
 

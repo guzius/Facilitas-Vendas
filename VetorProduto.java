@@ -1,4 +1,4 @@
-package Projeto;
+package ProjetoMaquinaDeVendas2;
 
 public class VetorProduto {
 
