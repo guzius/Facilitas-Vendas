@@ -70,8 +70,8 @@ public class Main {
                 case 3:
                        System.out.printf("\nEntre com o valor de pagamento : ");
                        valorPagamento = leia.nextDouble();
-         
-                        while(!carrinho.validaPagamento(carrinho.totalProdutosPagar(), valorPagamento)){
+                        Double valorTotal = carrinho.totalProdutosPagar();
+                        while(!carrinho.validaPagamento(valorTotal, valorPagamento)){
                                 System.out.println("O valor estÃ¡ a menor poderia adicionar novamente ? ");
                                 System.out.printf("\nEntre com o valor de pagamento : ");
                                 valorPagamento = leia.nextDouble();
