@@ -33,7 +33,7 @@ public class Funcionario implements Autenticar {
 		 CatalogodeProdutos catalogo = new CatalogodeProdutos();
 	     CarrinhodeCompras carrinho = new CarrinhodeCompras();
 		
-    	 System.out.println("--------   Administtrativo  ----------");
+    	 System.out.println("--------   Administrativo  ----------");
     	 System.out.print("Qual o seu nome : ");
     	 usuario = leia.next();
     	 System.out.print("Qual a sua senha : ");
