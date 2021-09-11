@@ -2,7 +2,7 @@ package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Funcionarios;
 
 import java.util.Scanner;
 
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Entrada;
+import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Menu.Entrada;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Autenticar.Autenticar;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.CarrinhodeCompras;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Produtos.CatalogodeProdutos;
@@ -52,7 +52,7 @@ public class Funcionario implements Autenticar {
             opcaoMenuFuncionario = leia.nextInt();
             
             while(!(opcaoMenuFuncionario==1 || opcaoMenuFuncionario==2)) {
-            	System.out.print("\nOpção invalida ! ");
+            	System.out.print("\nOpï¿½ï¿½o invalida ! ");
             	System.out.print("\nEntre com a opcao : ");
             	opcaoMenuFuncionario = leia.nextInt();
             }
@@ -94,13 +94,13 @@ public class Funcionario implements Autenticar {
             		break;
               } 
             	System.out.printf("Deseja fazer mais algum processo ?");
-            	System.out.printf("\n 1 - Sim\n 2 - Não ");
-            	System.out.print("\nOpção Escolhida :");
+            	System.out.printf("\n 1 - Sim\n 2 - Nï¿½o ");
+            	System.out.print("\nOpï¿½ï¿½o Escolhida :");
             	desejaContinuar = leia.nextInt();
             	
             	while(!(desejaContinuar==1 || desejaContinuar==2)) {
-            		System.out.print("\nOpção invalida ! ");
-            		System.out.print("\nOpção Escolhida :");
+            		System.out.print("\nOpï¿½ï¿½o invalida ! ");
+            		System.out.print("\nOpï¿½ï¿½o Escolhida :");
                 	desejaContinuar = leia.nextInt();
             	}
             	

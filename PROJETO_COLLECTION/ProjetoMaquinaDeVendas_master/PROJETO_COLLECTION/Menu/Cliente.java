@@ -1,4 +1,4 @@
-package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION;
+package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Menu;
 
 import java.util.Scanner;
 

@@ -7,6 +7,7 @@ import java.util.Scanner;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.CarrinhodeCompras;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Produtos.CatalogodeProdutos;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Funcionarios.Funcionario;
+import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Menu.Entrada;
 
 
 public class Main {
