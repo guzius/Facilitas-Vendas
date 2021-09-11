@@ -7,5 +7,4 @@ public interface Autenticar {
 	public abstract boolean FuncAutenticar(String senha);
 	
 
-	
 }

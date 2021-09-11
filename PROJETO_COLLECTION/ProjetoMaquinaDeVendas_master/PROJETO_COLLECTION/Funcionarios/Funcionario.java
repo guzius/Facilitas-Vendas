@@ -2,13 +2,14 @@ package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Funcionarios;
 
 import java.util.Scanner;
 
+import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Entrada;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Autenticar.Autenticar;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.CarrinhodeCompras;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Produtos.CatalogodeProdutos;
 
 public class Funcionario implements Autenticar {
 	
-	
+	private int desejaContinuar=0;
 	private String nome;
 
 	public Funcionario(String nome,String senha) {
@@ -42,7 +43,7 @@ public class Funcionario implements Autenticar {
     	Funcionario funcionario = new Funcionario(usuario,senha);
     	if(funcionario.FuncAutenticar(senha)) {
     		System.out.println("\n\nUsuario Autenticado");
-    		
+    	do {
     		System.out.println("Digite a opcao desejada\n");
             System.out.println("-1 Adicionar Produto");
             System.out.println("-2 Remover Produto");
@@ -51,7 +52,7 @@ public class Funcionario implements Autenticar {
             opcaoMenuFuncionario = leia.nextInt();
             
             while(!(opcaoMenuFuncionario==1 || opcaoMenuFuncionario==2)) {
-            	System.out.print("\nOpÃ§Ã£o invalida ! ");
+            	System.out.print("\nOpção invalida ! ");
             	System.out.print("\nEntre com a opcao : ");
             	opcaoMenuFuncionario = leia.nextInt();
             }
@@ -81,7 +82,6 @@ public class Funcionario implements Autenticar {
             		catalogo.apresentarCatalogoProdutos();
             		
             		break;
-            	
             	case 2 :
             		System.out.println("\nOs produtos em Estoque");
             		catalogo.apresentarCatalogoProdutos();
@@ -92,12 +92,27 @@ public class Funcionario implements Autenticar {
             		
             		catalogo.apresentarCatalogoProdutos();
             		break;
-            }  
-    	}else {
+              } 
+            	System.out.printf("Deseja fazer mais algum processo ?");
+            	System.out.printf("\n 1 - Sim\n 2 - Não ");
+            	System.out.print("\nOpção Escolhida :");
+            	desejaContinuar = leia.nextInt();
+            	
+            	while(!(desejaContinuar==1 || desejaContinuar==2)) {
+            		System.out.print("\nOpção invalida ! ");
+            		System.out.print("\nOpção Escolhida :");
+                	desejaContinuar = leia.nextInt();
+            	}
+            	
+    		}while(desejaContinuar==1);
+  
+       }else {
     		System.out.println("Erro na autenticacao");
-		
-		
+    		Entrada entrada = new Entrada();
+        	entrada.entrada();
+    	 }
+    	System.out.println("\nSaindo da parte administrativa!\n");
+    	Entrada entrada = new Entrada();
+    	entrada.entrada();
 	}
-
-}
 }

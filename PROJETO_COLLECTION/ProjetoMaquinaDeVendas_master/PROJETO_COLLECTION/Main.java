@@ -15,8 +15,6 @@ public class Main {
     	
     	Entrada entrada = new Entrada();
     	entrada.entrada();
-    	
-    	
  
     }
 }
