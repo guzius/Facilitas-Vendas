@@ -1,4 +1,4 @@
-package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Autenticar;
+package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Funcionarios;
 
 public interface Autenticar {
 	

@@ -1,10 +1,10 @@
-package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION;
+package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Menu;
 
 import java.util.Scanner;
 
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Funcionarios.Funcionario;
+import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Funcionarios.Funcionario;
 
-public class Entrada {
+public class Principal {
 
 	public void entrada() throws Exception{
 		

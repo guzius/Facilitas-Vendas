@@ -1,12 +1,10 @@
-package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION;
+package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Menu;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.CarrinhodeCompras;
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Pagamento;
+import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Carrinho_Pagamento.CarrinhodeCompras;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Produtos.CatalogodeProdutos;
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Funcionarios.Funcionario;
 
 public class Cliente {
 

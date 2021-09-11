@@ -1,10 +1,9 @@
-package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Funcionarios;
+package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Funcionarios;
 
 import java.util.Scanner;
 
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Entrada;
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Autenticar.Autenticar;
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.CarrinhodeCompras;
+import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Menu.Principal;
+import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Carrinho_Pagamento.CarrinhodeCompras;
 import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Produtos.CatalogodeProdutos;
 
 public class Funcionario implements Autenticar {
@@ -117,11 +116,11 @@ public class Funcionario implements Autenticar {
        }
    	else    {
 				System.out.println("Erro na autenticacao");
-				Entrada entrada = new Entrada();
-				entrada.entrada();
+				Principal principal = new Principal();
+				principal.entrada();
 			}
 				System.out.println("\nSaindo da parte administrativa!\n");
-				Entrada entrada = new Entrada();
-				entrada.entrada();
+				Principal principal = new Principal();
+				principal.entrada();
 	}
 }

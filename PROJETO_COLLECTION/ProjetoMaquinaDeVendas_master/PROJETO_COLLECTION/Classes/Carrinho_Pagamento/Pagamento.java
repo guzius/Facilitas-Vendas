@@ -1,4 +1,4 @@
-package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes;
+package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Carrinho_Pagamento;
 
 import java.util.Scanner;
 
