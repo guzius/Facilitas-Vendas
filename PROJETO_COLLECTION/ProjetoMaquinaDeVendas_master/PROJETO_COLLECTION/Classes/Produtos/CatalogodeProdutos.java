@@ -1,5 +1,6 @@
-package ProjetoMaquinaDeVendas-master.PROJETO_COLLECTION.Classes.Produtos;
+package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Produtos;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,17 @@ public class CatalogodeProdutos extends Produto {
 
         return  this.produtosdoCatalogo.get(id_produto);
 
+    }
+    
+    public void removeProdutoCatalogo(int id_produto) throws Exception {
+    	Produto produto = getProdutodoCatalogo(id_produto);
+    	try {
+    	 produtosdoCatalogo.remove(id_produto);
+    	 System.out.println("Produto removido!");
+    	}catch(Exception e) {
+    		throw new Exception("Erro ao apagar o produto");
+    	}
+	
     }
 
     public void setProdutosdoCatalogo(Produto objetoProduto)
@@ -35,11 +47,15 @@ public class CatalogodeProdutos extends Produto {
         setProdutosdoCatalogo(novoProduto); //Adiciona um Objeto de produto na colletion
 
     //    System.out.println("\nO produto: " + novoProduto.getNome() + " foi Adicionado no catalogo com sucesso ");
-
     }
 
     public void apresentarCatalogoProdutos()
     {
+    	System.out.println("\n");
+		System.out.println("+-----------------------------------------+");
+		System.out.println("|                PRODUTOS                 |");
+		System.out.println("+-----------------------------------------+");
+    	
         for (int i=0; i< produtosdoCatalogo.size(); i++)
         {
 
@@ -47,27 +63,26 @@ public class CatalogodeProdutos extends Produto {
             String nomeProduto = produtosdoCatalogo.get(i).getNome(); //CAPTURA NOME DO PRODUTO
             Double precoProduto = produtosdoCatalogo.get(i).getPreco(); //CAPTURA PRECO DO PRODUTO
 
-            //O ID DO PRODUTO SE REFERE AO INDEX DA COLETION ONDE O OBJETO ESTÁ ARMAZENADO
+            //O ID DO PRODUTO SE REFERE AO INDEX DA COLETION ONDE O OBJETO ESTÃ� ARMAZENADO
             int id_produto = i;
+            
+            NumberFormat nf = NumberFormat.getCurrencyInstance();
+    		nf.setMinimumFractionDigits(2);
+    		String formatoMoeda = nf.format(precoProduto);
 
-            System.out.println("ID: " + id_produto + " Produto: " + nomeProduto + "Valor: " +precoProduto);
+            System.out.println("|ID: " + id_produto + " - " + nomeProduto + "\t\t(" +formatoMoeda+") |");
+
         }
+        System.out.println("+-----------------------------------------+");
     }
 
     public void adicionarCatalogoPadrao() //METODO AUXILIAR PRA ATRIBUIR ALGUNS PRODUTOS POR PADRAO NO CATALOGO
     {
         this.AdicionarProduto("Refrigerante", 3.0, "25/10/2022", 10);
-        this.AdicionarProduto("Chocolate", 7.0, "25/10/2021", 5);
-        this.AdicionarProduto("Agua", 2.0, "05/05/2022", 20);
-        this.AdicionarProduto("Energético", 5.50, "05/05/2023", 1);
-        this.AdicionarProduto("M$M'S", 5.50, "09/09/2021", 5);
+        this.AdicionarProduto("Chocolate   ", 7.0, "25/10/2021", 5);
+        this.AdicionarProduto("Agua        ", 2.0, "05/05/2022", 20);
+        this.AdicionarProduto("Energético  ", 5.50, "05/05/2023", 1);
+        this.AdicionarProduto("M&M'S       ", 5.50, "09/09/2021", 5);
     }
-
-
-
-
-
-
-
 }
 
