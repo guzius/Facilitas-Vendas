@@ -43,10 +43,8 @@ public class CatalogodeProdutos extends Produto {
         novoProduto.setPreco(preco);
         novoProduto.setValidade(validade);
         novoProduto.setQuantidade(quantidade);
+        setProdutosdoCatalogo(novoProduto); //Adiciona um Objeto de produto na
 
-        setProdutosdoCatalogo(novoProduto); //Adiciona um Objeto de produto na colletion
-
-    //    System.out.println("\nO produto: " + novoProduto.getNome() + " foi Adicionado no catalogo com sucesso ");
     }
 
     public void apresentarCatalogoProdutos()
@@ -69,7 +67,6 @@ public class CatalogodeProdutos extends Produto {
             NumberFormat nf = NumberFormat.getCurrencyInstance();
     		nf.setMinimumFractionDigits(2);
     		String formatoMoeda = nf.format(precoProduto);
-
             System.out.println("|ID: " + id_produto + " - " + nomeProduto + "\t\t(" +formatoMoeda+") |");
 
         }
