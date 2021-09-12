@@ -1,4 +1,4 @@
-package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Produtos;
+package ProjetoMaquinaDeVendas.Classes.Produtos;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;

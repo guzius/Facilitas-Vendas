@@ -1,10 +1,10 @@
-package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Menu;
+package ProjetoMaquinaDeVendas.Classes.Menu;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Carrinho_Pagamento.CarrinhodeCompras;
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Produtos.CatalogodeProdutos;
+import ProjetoMaquinaDeVendas.Classes.Carrinho_Pagamento.CarrinhodeCompras;
+import ProjetoMaquinaDeVendas.Classes.Produtos.CatalogodeProdutos;
 
 public class Cliente {
 
@@ -65,7 +65,7 @@ public class Cliente {
                                 switch (opcaoMenuCarrinho)
                                 {
                                     case 1: carrinho.mostrarProdutosCarrinho();
-                                        System.out.println("Aperte enter para continuar");
+                                        System.out.println("\t\tAperte enter para continuar");
                                         System.in.read();
                                     break;
 
@@ -84,6 +84,7 @@ public class Cliente {
                                             System.out.println("Digite o ID DO PRODUTO A REMOVER");
                                             produtoID = leia.nextInt();
                                             carrinho.removerProdutoCarrinho(produtoID);
+                                            System.out.println("\nPRODUTO REMOVIDO DO CARRINHO COM SUCESSO!");
                                             System.out.println("\n1-- Continuar removendo  \n2-- Retornar ao menu do cliente");
                                             opcaoRemover = leia.nextInt();
                                         }while(opcaoRemover==1);

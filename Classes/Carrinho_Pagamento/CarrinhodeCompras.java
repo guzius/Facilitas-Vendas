@@ -1,11 +1,12 @@
-package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes;
+package ProjetoMaquinaDeVendas.Classes.Carrinho_Pagamento;
 
 
+import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Classes.Produtos.Produto;
+import ProjetoMaquinaDeVendas.Classes.Produtos.Produto;
 
 public class CarrinhodeCompras {
 
@@ -42,29 +43,28 @@ public class CarrinhodeCompras {
 
 
 
-    public void mostrarProdutosCarrinho (){
-        System.out.println("\n----------------------------- PRODUTOS DO SEU CARRINHO -----------------------\n");
+    public void mostrarProdutosCarrinho () throws IOException {
+        System.out.println("\n+----------------------------------------+");
+        System.out.println("|        PRODUTOS DO SEU CARRINHO        |");
+        System.out.println("+----------------------------------------+");
         for (int i=0; i< carrinhodeCompras.size(); i++)
         {
                String nomeProduto = carrinhodeCompras.get(i).getNome();
                //CAPTURA NOME DO OBJETO ATRAV�S DO INDEX ONDE EST� ARMAZENADO NA LISTA LISTA (COLLETION)
-
                Double precoProduto = carrinhodeCompras.get(i).getPreco();
                //CAPTURA NOME DO OBJETO ATRAV�S DO INDEX ONDE EST� ARMAZENADO NA LISTA LISTA (COLLETION)
-
                int id_produto = i;
                //O ID DO PRODUTO SE REFERE AO INDEX DA COLETION ONDE O OBJETO EST� ARMAZENADO
-
 
                NumberFormat nf = NumberFormat.getCurrencyInstance();
                nf.setMinimumFractionDigits(2);
                String formatoMoeda = nf.format(precoProduto);
-
-              System.out.println("|ID: " + id_produto + " - " + nomeProduto + "\t\t(" +formatoMoeda+") |");
+              System.out.println("ID: " + id_produto + " - " + nomeProduto + "\t\t(" +formatoMoeda+") ");
 
         }
-        System.out.println("TOTAL A PAGAR: " + this.totalProdutosPagar());
-        System.out.println("\n-----------------------------------------------------------------------\n");
+        System.out.println("|----------------------------------------|");
+        System.out.println("\t\t\tTOTAL A PAGAR: " + this.totalProdutosPagar());
+
 
     }
 
@@ -89,21 +89,17 @@ public class CarrinhodeCompras {
     public void Pagamento(double valor) {
     	Double totalAPagar = this.total_a_pagar;
     	System.out.println("O valor total da compra é :"+totalAPagar);
-    	if(valor < totalAPagar ) {
+
+    	if(valor < totalAPagar )
+    	{
     		System.out.printf("\nO valor inserido é insuficiente");
-    	}else {
+    	}else
+    	{
     		valor -= totalAPagar;
     		System.out.println("Pagamento efetuado com sucesso!!\nO seu troco é de :"+valor);
     	}
     }
     
-    /*
-     * NumberFormat nf = NumberFormat.getCurrencyInstance();
-       			nf.setMinimumFractionDigits(2);
-       			String formatoMoeda = nf.format(precoProduto);
 
-               System.out.println("|ID: " + id_produto + " - " + nomeProduto + "\t\t(" +formatoMoeda+") |");
-     */
-    
     
 }

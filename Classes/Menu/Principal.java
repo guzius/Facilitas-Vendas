@@ -1,10 +1,10 @@
-package ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Menu;
+package ProjetoMaquinaDeVendas.Classes.Menu;
 
 import java.util.Scanner;
 
-import ProjetoMaquinaDeVendas_master.PROJETO_COLLECTION.Funcionarios.Funcionario;
+import ProjetoMaquinaDeVendas.Classes.Funcionarios.Funcionario;
 
-public class Entrada {
+public class Principal {
 
 	public void entrada() throws Exception{
 		
@@ -15,9 +15,9 @@ public class Entrada {
 		System.out.println("|            SEJA BEM-VINDO            |");
 		System.out.println(
 			"| 01 - Cliente                         |\n" +
-			"| 02 - Funcionário                     |");
+			"| 02 - Funcionario                     |");
 		System.out.println("+--------------------------------------+");
-		System.out.print("Opção escolhida: ");
+		System.out.print("Opcao escolhida: ");
 		opcao = leitor.nextInt();
 		
 		switch(opcao)

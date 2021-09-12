@@ -1,9 +1,13 @@
 
 
-#Documentação
+#Documentação UML de Classes
+
+![img_1.png](img_1.png)
+
+LINK LUCID: https://lucid.app/lucidchart/548e6f9d-b961-4c57-a9b8-b6e60b09beee/view?page=0_0#
+
 
 ## Classe CatalogodeProdutos
-
 esta classe é responsável por manipular os produtos disponíveis 
 para compra;
 
@@ -13,7 +17,6 @@ Este metodo retorna um objeto da colletion com base no parametro id_produto
 CatalogodeProdutos catalogo = new CatalogodeProdutos();
 catalogo.getProdutodoCatalogo(2)  
 ````
-
 
 ### MÉTODO: AdicionarProduto (string nome, double preco, string validade, inteiro quantidade) <br>
 
