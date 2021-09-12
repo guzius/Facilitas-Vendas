@@ -16,6 +16,7 @@ Projeto desenvolvido em SQUAD na Generation
     <td align="center"><a href="https://github.com/Guzius"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/89790032?v=4" width="100px;" alt="Gustavo Sotrati"/><br /><sub><b>Gustavo Sotrati </b></sub> <br>👨‍🚀 </a><br/></td> 
     <td align="center"><a href="https://github.com/JohnClaudio"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/61328786?v=4" width="100px;" alt="Joao Claudio"/><br /><sub><b>Joao Claudio </b></sub> <br>👨‍🚀 </a><br/></td> 
     <td align="center"><a href="https://github.com/luisfsm"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/42703204?v=4" width="100px;" alt="Luis Felipe"/><br /><sub><b>Luis Felipe </b></sub> <br>👨‍🚀 </a><br/></td> 
+     <td align="center"><a href="https://github.com/GustavoHSilva01"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/42703204?v=4" width="100px;" alt="Gustavo Silva"/><br /><sub><b>Gustavo Silva </b></sub> <br>👨‍🚀 </a><br/></td> 
 
 
   </tr>
