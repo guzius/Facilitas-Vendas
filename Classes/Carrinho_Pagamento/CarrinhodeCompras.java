@@ -88,15 +88,15 @@ public class CarrinhodeCompras {
 
     public void Pagamento(double valor) {
     	Double totalAPagar = this.total_a_pagar;
-    	System.out.println("O valor total da compra Ã© :"+totalAPagar);
+    	System.out.println("O valor total da compra é : "+totalAPagar);
 
     	if(valor < totalAPagar )
     	{
-    		System.out.printf("\nO valor inserido Ã© insuficiente");
+    		System.out.printf("\nO valor inserido é insuficiente");
     	}else
     	{
     		valor -= totalAPagar;
-    		System.out.println("Pagamento efetuado com sucesso!!\nO seu troco Ã© de :"+valor);
+    		System.out.println("Pagamento efetuado com sucesso!!\nO seu troco é de : "+valor);
     	}
     }
     
