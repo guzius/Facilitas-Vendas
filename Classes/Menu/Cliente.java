@@ -133,6 +133,7 @@ public class Cliente {
 
                      carrinho.Pagamento(valorPagamento);
                      System.out.printf("\nSUA COMPRA FOI FINALIZADA! OBRIGADE POR USAR NOSSO SISTEMA =D ");
+		break;
 		case 5:
                 	Principal principal = new Principal(carrinho,catalogo);
     			principal.entrada();
