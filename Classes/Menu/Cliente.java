@@ -26,7 +26,7 @@ public class Cliente {
 	}
 
 	
-	public void cliente() throws IOException {
+	public void cliente() throws Exception {
         int opcaoMenu=0,produtoID;
         Scanner leia = new Scanner(System.in);
 		
