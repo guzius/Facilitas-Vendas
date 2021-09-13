@@ -41,6 +41,7 @@ public class Cliente {
             System.out.println("-2 MEU CARRINHO");
             System.out.println("-3 VER CATALOGO");
             System.out.println("-4 REALIZAR PAGAMENTO");
+		System.out.println("-5 SAIR DO PROGRAMA");
             System.out.println("+--------------------------------------+");
             System.out.print("Entre com a opcao : ");
             opcaoMenu = leia.nextInt();
@@ -74,6 +75,7 @@ public class Cliente {
                         System.out.println("-2 ADICIONAR MAIS UM PRODUTOS");
                         System.out.println("-3 REMOVER PRODUTOS");
                         System.out.println("-4 RETORNAR AO MENU PRINCIPAL\n");
+			System.out.println("-5 SAIR DO PROGRAMA");
                         System.out.print("Entre com a opcao : ");
                         opcaoMenuCarrinho = leia.nextInt();
 
@@ -124,7 +126,7 @@ public class Cliente {
 
                      while(!carrinho.validaPagamento(valorTotal, valorPagamento))
                      {
-                             System.out.println("O valor é inferior do que o pagamento total poderia adicionar novamente ?\nSeu dinheiro foi devolvido ");
+                             System.out.println("O valor Ã© inferior do que o pagamento total poderia adicionar novamente ?\nSeu dinheiro foi devolvido ");
                              System.out.printf("\nEntre com o valor de pagamento : ");
                              valorPagamento = leia.nextDouble();
                      }
