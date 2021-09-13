@@ -2,9 +2,21 @@ package ProjetoMaquinaDeVendas.Classes.Menu;
 
 import java.util.Scanner;
 
+import ProjetoMaquinaDeVendas.Classes.Carrinho_Pagamento.CarrinhodeCompras;
 import ProjetoMaquinaDeVendas.Classes.Funcionarios.Funcionario;
+import ProjetoMaquinaDeVendas.Classes.Produtos.CatalogodeProdutos;
 
 public class Principal {
+
+	
+	private CarrinhodeCompras carrinho;
+	private CatalogodeProdutos catalogo;
+
+	public Principal(CarrinhodeCompras carrinho, CatalogodeProdutos catalogo) {
+		super();
+		this.carrinho = carrinho;
+		this.catalogo = catalogo;
+	}
 
 	public void entrada() throws Exception{
 		
@@ -23,15 +35,15 @@ public class Principal {
 		switch(opcao)
 		{
 		case 1:
-			Cliente cliente = new Cliente();
+			Cliente cliente = new Cliente(carrinho,catalogo);
 			cliente.cliente();
 			break;
 		case 2:
-			Funcionario funcionario = new Funcionario("","");
+			Funcionario funcionario = new Funcionario(carrinho,catalogo);
 			funcionario.funcionario();
 			break;
 		default:
-			System.out.println("Op√ß√£o Inv√°lida! Escolha outra op√ß√£o: ");
+			System.out.println("OpÁ„o Inv·lida! Escolha outra OpÁ„o: ");
 			opcao = leitor.nextInt();
 			
 		}

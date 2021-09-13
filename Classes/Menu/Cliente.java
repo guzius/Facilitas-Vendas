@@ -8,9 +8,24 @@ import ProjetoMaquinaDeVendas.Classes.Produtos.CatalogodeProdutos;
 
 public class Cliente {
 
-    private CatalogodeProdutos catalogo = new CatalogodeProdutos();
-    private CarrinhodeCompras carrinho = new CarrinhodeCompras();
+	private CatalogodeProdutos catalogo;
+	private CarrinhodeCompras carrinho;
 
+	
+
+	public Cliente() {
+		super();
+	}
+
+
+
+	public Cliente(CarrinhodeCompras carrinho,CatalogodeProdutos catalogo) {
+		super();
+		this.catalogo = catalogo;
+		this.carrinho = carrinho;
+	}
+
+	
 	public void cliente() throws IOException {
         int opcaoMenu=0,produtoID;
         Scanner leia = new Scanner(System.in);
@@ -102,13 +117,14 @@ public class Cliente {
 
                 case 4:
 
-                	 System.out.printf("\nEntre com o valor de pagamento : ");
-                     Double valorPagamento = leia.nextDouble();
-                     Double valorTotal = carrinho.totalProdutosPagar();
+                  	Double valorTotal = carrinho.totalProdutosPagar();
+                  	System.out.println("O valor total da sua compra : "+valorTotal);
+                  	System.out.printf("\nEntre com o valor de pagamento : ");
+                    Double valorPagamento = leia.nextDouble();
 
                      while(!carrinho.validaPagamento(valorTotal, valorPagamento))
                      {
-                             System.out.println("O valor Ã© inferior do que o pagamento total poderia adicionar novamente ? \n Seu dinheiro foi devolvido ");
+                             System.out.println("O valor é inferior do que o pagamento total poderia adicionar novamente ? \n Seu dinheiro foi devolvido ");
                              System.out.printf("\nEntre com o valor de pagamento : ");
                              valorPagamento = leia.nextDouble();
                      }
@@ -122,7 +138,4 @@ public class Cliente {
 
          }
     }
-
-
-		
-	}
+}

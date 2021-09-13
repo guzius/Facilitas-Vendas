@@ -7,14 +7,23 @@ import ProjetoMaquinaDeVendas.Classes.Carrinho_Pagamento.CarrinhodeCompras;
 import ProjetoMaquinaDeVendas.Classes.Produtos.CatalogodeProdutos;
 
 public class Funcionario implements Autenticar {
-	
 	private int desejaContinuar=0;
 	private String nome;
-
+	private CatalogodeProdutos catalogo;
+	private CarrinhodeCompras carrinho;
+	
+	
 	public Funcionario(String nome,String senha) {
 		this.nome = nome;
 	}
 	
+	
+	public Funcionario(CarrinhodeCompras carrinho ,CatalogodeProdutos catalogo) {
+		super();
+		this.catalogo = catalogo;
+		this.carrinho = carrinho;
+	}
+
 	@Override
 	public boolean FuncAutenticar(String senha) {
 		if(Autenticar.senhaAcesso.equals(senha)) {
@@ -54,8 +63,8 @@ public class Funcionario implements Autenticar {
             
             while(!(opcaoMenuFuncionario==1 || opcaoMenuFuncionario==2))
             {
-            	System.out.print("\nOpï¿½ï¿½o invalida ! ");
-            	System.out.print("\nEntre com a opcao : ");
+            	System.out.print("\nOpção invalida ! ");
+            	System.out.print("\nEntre com a opção : ");
             	opcaoMenuFuncionario = leia.nextInt();
             }
             
@@ -114,13 +123,14 @@ public class Funcionario implements Autenticar {
     		}while(desejaContinuar==1);
 
        }
-   	else    {
-				System.out.println("Erro na autenticacao");
-				Principal principal = new Principal();
-				principal.entrada();
-			}
-				System.out.println("\nSaindo da parte administrativa!\n");
-				Principal principal = new Principal();
-				principal.entrada();
-	}
+       else    {
+    				System.out.println("Erro na autenticação");
+    				Principal principal = new Principal(carrinho,catalogo);
+    				principal.entrada();
+    			}
+        	
+    				System.out.println("\nSaindo da parte administrativa!\n");
+    				Principal principal = new Principal(carrinho,catalogo);
+    				principal.entrada();
+    	}
 }
