@@ -52,7 +52,7 @@ public class Cliente {
 
                 	do {
                 		catalogo.apresentarCatalogoProdutos();
-                        System.out.println("\nDIGITE O ID DO PRODUTO QUE DESEJA COMPRAR");
+                        System.out.print("\nDIGITE O ID DO PRODUTO QUE DESEJA COMPRAR : ");
                         produtoID = leia.nextInt();
                         carrinho.AdicionarProdutoCarrinho(catalogo.getProdutodoCatalogo(produtoID));
                         System.out.println("\nPRODUTO ADICIONADO AO CARRINHO COM SUCESSO! \nDESEJA CONTINUAR COMPRANDO?");
@@ -124,7 +124,7 @@ public class Cliente {
 
                      while(!carrinho.validaPagamento(valorTotal, valorPagamento))
                      {
-                             System.out.println("O valor é inferior do que o pagamento total poderia adicionar novamente ? \n Seu dinheiro foi devolvido ");
+                             System.out.println("O valor é inferior do que o pagamento total poderia adicionar novamente ?\nSeu dinheiro foi devolvido ");
                              System.out.printf("\nEntre com o valor de pagamento : ");
                              valorPagamento = leia.nextDouble();
                      }

@@ -76,10 +76,10 @@ public class CatalogodeProdutos extends Produto {
     public void adicionarCatalogoPadrao() //METODO AUXILIAR PRA ATRIBUIR ALGUNS PRODUTOS POR PADRAO NO CATALOGO
     {
         this.AdicionarProduto("Refrigerante", 3.0, "25/10/2022", 10);
-        this.AdicionarProduto("Chocolate   ", 7.0, "25/10/2021", 5);
-        this.AdicionarProduto("Agua        ", 2.0, "05/05/2022", 20);
-        this.AdicionarProduto("Energético  ", 5.50, "05/05/2023", 1);
-        this.AdicionarProduto("M&M'S       ", 5.50, "09/09/2021", 5);
+        this.AdicionarProduto("Chocolate", 7.0, "25/10/2021", 5);
+        this.AdicionarProduto("Agua", 2.0, "05/05/2022", 20);
+        this.AdicionarProduto("Energético", 5.50, "05/05/2023", 1);
+        this.AdicionarProduto("M&M'S", 5.50, "09/09/2021", 5);
     }
 }
 

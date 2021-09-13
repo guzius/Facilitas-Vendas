@@ -12,6 +12,10 @@ public class Produto {
     }
 
     public void setNome(String nome) {
+    	int tamMaximo = 12;
+    	while(nome.length()<tamMaximo) {
+			nome +=" ";
+		}
         this.nome = nome;
     }
 
