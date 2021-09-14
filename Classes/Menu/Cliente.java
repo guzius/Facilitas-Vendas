@@ -42,6 +42,7 @@ public class Cliente {
             System.out.println("-2 MEU CARRINHO");
             System.out.println("-3 VER CATALOGO");
             System.out.println("-4 REALIZAR PAGAMENTO");
+		System.out.println("-5 SAIR DO PROGRAMA");
             System.out.println("+--------------------------------------+");
             System.out.print("Entre com a opcao : ");
             opcaoMenu = leia.nextInt();
@@ -76,6 +77,7 @@ public class Cliente {
                         System.out.println("-2 ADICIONAR MAIS UM PRODUTOS");
                         System.out.println("-3 REMOVER PRODUTOS");
                         System.out.println("-4 RETORNAR AO MENU PRINCIPAL\n");
+			System.out.println("-5 SAIR DO PROGRAMA");
                         System.out.print("Entre com a opcao : ");
                         opcaoMenuCarrinho = leia.nextInt();
 
@@ -142,11 +144,19 @@ public class Cliente {
                      }
 
                      carrinho.Pagamento(valorPagamento);
+
                      System.out.printf("\nSUA COMPRA FOI FINALIZADA! OBRIGADE POR USAR NOSSO SISTEMA =D \n");
                      System.out.println("Retornando ao menu Inicial em 3 Segundos \n");
                      TimeUnit.SECONDS.sleep(3);
                      Principal principal = new Principal(carrinho,catalogo);
                      principal.entrada();
+
+                     System.out.printf("\nSUA COMPRA FOI FINALIZADA! OBRIGADE POR USAR NOSSO SISTEMA =D ");
+		break;
+		case 5:
+                	Principal principal1 = new Principal(carrinho,catalogo);
+    			principal1.entrada();
+
 
                  break;
                } 
