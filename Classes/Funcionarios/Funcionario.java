@@ -57,11 +57,11 @@ public class Funcionario implements Autenticar {
     		System.out.println("Digite a opcao desejada\n");
             System.out.println("-1 Adicionar Produto");
             System.out.println("-2 Remover Produto");
-            
+            System.out.println("-3 Ver catalogo");
             System.out.print("Entre com a opcao : ");
             opcaoMenuFuncionario = leia.nextInt();
             
-            while(!(opcaoMenuFuncionario==1 || opcaoMenuFuncionario==2))
+            while(!(opcaoMenuFuncionario>=1 || opcaoMenuFuncionario<=3))
             {
             	System.out.print("\nOpção invalida ! ");
             	System.out.print("\nEntre com a opção : ");
@@ -104,6 +104,9 @@ public class Funcionario implements Autenticar {
 
             		catalogo.removeProdutoCatalogo(produtoID);
             		
+            		catalogo.apresentarCatalogoProdutos();
+            		break;
+            	case 3 :
             		catalogo.apresentarCatalogoProdutos();
             		break;
               }

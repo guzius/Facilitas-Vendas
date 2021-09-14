@@ -2,6 +2,7 @@ package ProjetoMaquinaDeVendas.Classes.Menu;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import ProjetoMaquinaDeVendas.Classes.Carrinho_Pagamento.CarrinhodeCompras;
 import ProjetoMaquinaDeVendas.Classes.Produtos.CatalogodeProdutos;
@@ -26,7 +27,7 @@ public class Cliente {
 	}
 
 	
-	public void cliente() throws IOException {
+	public void cliente() throws Exception {
         int opcaoMenu=0,produtoID;
         Scanner leia = new Scanner(System.in);
 		
@@ -57,6 +58,7 @@ public class Cliente {
                         carrinho.AdicionarProdutoCarrinho(catalogo.getProdutodoCatalogo(produtoID));
                         System.out.println("\nPRODUTO ADICIONADO AO CARRINHO COM SUCESSO! \nDESEJA CONTINUAR COMPRANDO?");
                         System.out.println("\n1-- Continuar Comprando \n2-- Retornar ao menu do cliente");
+                        System.out.print("Entre com a opção : ");
                         opcaoComprar = leia.nextInt();
                 		
                 	}while(opcaoComprar!=2);
@@ -96,11 +98,12 @@ public class Cliente {
                                         int opcaoRemover =0;
                                         do {
                                             carrinho.mostrarProdutosCarrinho();
-                                            System.out.println("Digite o ID DO PRODUTO A REMOVER");
+                                            System.out.print("Digite o ID DO PRODUTO A REMOVER : ");
                                             produtoID = leia.nextInt();
                                             carrinho.removerProdutoCarrinho(produtoID);
                                             System.out.println("\nPRODUTO REMOVIDO DO CARRINHO COM SUCESSO!");
-                                            System.out.println("\n1-- Continuar removendo  \n2-- Retornar ao menu do cliente");
+                                            System.out.println("\n1-- Continuar removendo  \n2-- Retornar ao menu do carrinho");
+                                            System.out.print("Entre com a opcao : ");
                                             opcaoRemover = leia.nextInt();
                                         }while(opcaoRemover==1);
                                 }
@@ -119,6 +122,15 @@ public class Cliente {
 
                   	Double valorTotal = carrinho.totalProdutosPagar();
                   	System.out.println("O valor total da sua compra : "+valorTotal);
+                  	
+                  	System.out.println("Qual a forma de pagamento ? ");
+                  	System.out.println("1 - Dinheiro");
+                  	System.out.println("2 - PIX");
+                  	System.out.println("3 - Cartão de Débitto");
+                  	System.out.println("4 - Cartão de Crédito \n");
+                  	System.out.print("Opção selecionada : ");
+                  	produtoID = leia.nextInt();
+                  	
                   	System.out.printf("\nEntre com o valor de pagamento : ");
                     Double valorPagamento = leia.nextDouble();
 
@@ -130,7 +142,11 @@ public class Cliente {
                      }
 
                      carrinho.Pagamento(valorPagamento);
-                     System.out.printf("\nSUA COMPRA FOI FINALIZADA! OBRIGADE POR USAR NOSSO SISTEMA =D ");
+                     System.out.printf("\nSUA COMPRA FOI FINALIZADA! OBRIGADE POR USAR NOSSO SISTEMA =D \n");
+                     System.out.println("Retornando ao menu Inicial em 3 Segundos \n");
+                     TimeUnit.SECONDS.sleep(3);
+                     Principal principal = new Principal(carrinho,catalogo);
+                     principal.entrada();
 
                  break;
                } 
